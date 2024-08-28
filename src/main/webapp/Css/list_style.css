@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Lexend", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: hsl(0deg 0% 7.1% / 1);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 6.4rem;
+  border-bottom: 1px solid rgb(107, 105, 105);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rem 2rem;
+}
+
+header > h1 {
+  font-optical-sizing: auto;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  color: WHITE;
+}
+
+[class$="_btn"],
+button:hover {
+  cursor: pointer;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+main,
+section {
+  width: inherit;
+}
+
+ul {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 26.7rem);
+  justify-content: center;
+  place-items: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+li {
+  width: 100%;
+  border: 1px solid rgb(107, 105, 105);
+  margin: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.8rem;
+  align-items: flex-start;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.highlighted {
+  background-color: rgb(70, 70, 72);
+  border: none;
+}
+.img_container {
+  position: relative;
+  border-radius: 1rem;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 20rem;
+  align-self: center;
+  transition-property: background-size;
+  transition-duration: 0.5s;
+}
+
+.zoomIn {
+  background-size: 120% 120%;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px -1px black;
+  right: 0;
+  opacity: 1;
+  background-color: #efc23a;
+  transition-property: transform opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.more_btn {
+  width: 10rem;
+  height: 4rem;
+  margin: 1rem;
+  border-radius: 10rem;
+}
+
+.play_btn {
+  border-radius: 50%;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+  opacity: 1;
+}
+
+.play_rect {
+  width: 0;
+  height: 0;
+  margin-left: 0.4rem;
+  border-left: 11px solid black;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.btn_text {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.error-msg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hidden-li {
+  display: none;
+}
+
+img {
+  width: 110px;
+  height: 110px;
+}
+
+.error-text {
+  color: #a29b9b;
+  font-size: 2.5rem;
+}
+
+.hidden {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.music_title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+}
+
+.music_artist {
+  color: rgb(162, 159, 154);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+}
+
+footer {
+  width: 100%;
+  height: 6.4rem;
+  background-color: #8c7a44;
+}

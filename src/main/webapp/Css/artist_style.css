@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  width: inherit;
+  height: inherit;
+  background-color: rgb(41, 39, 39);
+}
+
+section {
+  position: absolute;
+  width: 60%;
+  height: 80%;
+  background-color: rgb(19, 19, 19);
+  box-shadow: 0px 0px 20px -1px black;
+  inset: 0;
+  margin: auto;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.img {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  background-image: url(../resources/coffee-lab.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.blur {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.profile_pic {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 15rem;
+    height: 18rem;
+    margin-left: 2rem;
+    margin-bottom: 0.2rem;
+    border: 2px solid black;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 10px -1px black;
+  }
+
+.more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 2rem;
+  margin-bottom: -2.5rem;
+  border: none;
+  border-radius: 1rem;
+  width: 15rem;
+  height: 5rem;
+  z-index:1;
+  color: white;
+}
+
+.data {
+  width: 95%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  width: inherit;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: baseline;
+}
+
+li {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+div[class^="div_update--"] {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  width: 60rem;
+  height: fit-content;
+  padding: 2rem;
+  z-index: 1;
+  background-color: #8c7a44;
+}
+div[class^="div_update--"] > h1 {
+  font-size: 4rem;
+}
+
+div[class^="div_update--"] form {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+label {
+  font-size: 1.6rem;
+}
+
+.input_container {
+  width: 100%;
+  margin-bottom: 1rem;
+  height: 4rem;
+  display: grid;
+  grid-template-columns: 1.5fr 4fr;
+  justify-items: baseline;
+  align-items: center;
+}
+
+.input_container > input:not(input[id$="_date"], input[id$="_cover"]) {
+  width: 35rem;
+  height: 3rem;
+  border: none;
+  border-radius: 3rem;
+  padding: 2rem;
+}
+
+div[class^="div_remove--"] {
+  width: 30rem;
+  height: fit-content;
+  background-color: #8c7a44;
+  position: absolute;
+  border-radius: 1rem;
+  inset: 0;
+  margin: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+div[class^="div_remove--"] p {
+  color: white;
+}
+
+.delete_form {
+  width: 90%;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.delete_form > button {
+  width: 15rem;
+  height: 4rem;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+}
+
+.close_btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: brown;
+  align-self: flex-end;
+}
+
+nav {
+  width: 50%;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0rem 2rem;
+}
+
+nav > button {
+  border: none;
+  border-radius: 1rem;
+  width: 15rem;
+  height: 5rem;
+  color: white;
+}
+
+.hidden.hidden {
+  display: none;
+}
+
+button {
+  background-color: rgb(131, 127, 127);
+  transition: 0.5s;
+}
+
+.add {
+  width: 25rem;
+  margin-top: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  height: 5rem;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+button:hover {
+  background-color: rgb(73, 216, 99);
+  color: black;
+}

@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(41, 39, 39);
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: rgb(143, 167, 150);
+}
+
+h2 {
+  color: white;
+}
+
+section {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  background-color: rgb(19, 19, 19);
+  width: 70%;
+  height: 90%;
+  border-radius: 1rem;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+}
+
+.info {
+  width: 40%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  text-indent: 20rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.remove_tab {
+  width: 30rem;
+  height: 20rem;
+  background-color: aliceblue;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+  padding: 1rem;
+}
+
+.delete_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+div[class^="div_update--"] {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  width: 40rem;
+  height: fit-content;
+  padding: 1rem;
+  z-index: 100;
+  background-color: #8c7a44;
+}
+div[class^="div_update--"] > h1 {
+  font-size: 4rem;
+}
+
+div[class^="div_update--"] form {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+label {
+  font-size: 1.4rem;
+}
+
+.input_container {
+  width: 100%;
+  margin-bottom: 1rem;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1.5fr 4fr;
+  justify-items: baseline;
+  align-items: center;
+}
+
+.input_container > input:not(input[id$="_date"]) {
+  width: 25rem;
+  height: 3rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+div[class^="div_remove--"] {
+  width: 30rem;
+  height: fit-content;
+  background-color: #8c7a44;
+  position: absolute;
+  border-radius: 1rem;
+  inset: 0;
+  margin: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+div[class^="div_remove--"] p {
+  color: white;
+}
+
+.close_btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: brown;
+  align-self: flex-end;
+}
+
+nav {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+}
+
+button {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  border-radius: 1rem;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+}
+
+.add {
+  width: 20rem;
+  margin-top: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  height: 3rem;
+  color: white;
+  transition-duration: 0.5s;
+  background-color: rgb(131, 135, 135);
+}
+
+button:hover {
+  background-color: cadetblue;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.hidden.hidden {
+  display: none;
+}

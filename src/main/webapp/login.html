@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/login.css" type="text/css"/>
+    <script src="JS/authentication.js" defer></script>
+</head>
+<body>
+<main>
+    <h1>user login</h1>
+    <section>
+        <div class="container signUp hidden">
+            <form id="signUp-form" action="">
+                <input
+                        class="formType"
+                        type="hidden"
+                        name="formType"
+                        value="signup"
+                />
+                <input
+                        id="userName"
+                        name="username"
+                        type="text"
+                        placeholder="user name"
+                />
+                <input
+                        id="userEmail"
+                        name="userEmail"
+                        type="text"
+                        placeholder="Email"
+                />
+                <input
+                        id="userPassword"
+                        name="password"
+                        type="password"
+                        placeholder="password"
+                />
+                <input
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        type="password"
+                        placeholder="confirm password"
+                />
+                <button type="submit">sign up</button>
+            </form>
+            <p>
+                already have an account?
+                <span class="login_switcher" data-type="login">login</span>
+            </p>
+        </div>
+
+        <div class="container login">
+            <form id="login-form" action="">
+                <input
+                        class="formType"
+                        type="hidden"
+                        name="formType"
+                        value="login"
+                />
+                <input id="email" name="email" type="text" placeholder="Email"/>
+                <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        placeholder="password"
+                />
+                <button type="submit">Login</button>
+            </form>
+            <p>
+                Don't have an account?
+                <span class="signUp_switcher" data-type="signUp">sign up now</span>
+            </p>
+        </div>
+    </section>
+</main>
+</body>
+</html>
