@@ -7,6 +7,8 @@
 
 html {
   width: 100%;
+  font-size: 62.5%;
+  font-family: "Lexend", sans-serif;
   height: 100%;
 }
 
@@ -14,24 +16,25 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: rgb(41, 39, 39);
+  background-color: black;
 }
 
-h1 {
+.page-title {
   font-size: 4rem;
+  width: 100%;
+  height: 10rem;
   font-weight: 600;
-  color: rgb(143, 167, 150);
-}
-
-h2 {
-  color: white;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 10rem;
+  color: #fadd4b;
 }
 
 section {
   position: absolute;
   inset: 0;
+  background-color: #171717;
   margin: auto;
-  background-color: rgb(19, 19, 19);
   width: 70%;
   height: 90%;
   border-radius: 1rem;
@@ -44,20 +47,38 @@ section {
 
 .main {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  height: 40rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
   gap: 2rem;
   align-items: center;
 }
 
+iframe {
+  width: 100%;
+  height: 90%;
+}
+
 .info {
-  width: 40%;
-  height: 15rem;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: baseline;
+  gap: 0.5rem;
+}
+
+h2 {
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+h2 > span {
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 span {
@@ -105,29 +126,36 @@ div[class^="div_update--"] {
   position: absolute;
   inset: 0;
   margin: auto;
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  border-radius: 2rem;
+  border-radius: 1rem;
+  gap: 0.5rem;
   width: 40rem;
+  /*min-height: 35rem;*/
   height: fit-content;
   padding: 1rem;
   z-index: 100;
-  background-color: #8c7a44;
+  background-color: #f2c029;
 }
 div[class^="div_update--"] > h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
+  padding: 0rem 2rem;
+  text-transform: capitalize;
+  color: black;
+  margin-bottom: 2rem;
 }
 
 div[class^="div_update--"] form {
   width: 100%;
-  height: fit-content;
+  /*overflow: hidden;*/
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 2rem;
+  gap: 1rem;
 }
 
 label {
@@ -136,8 +164,6 @@ label {
 
 .input_container {
   width: 100%;
-  margin-bottom: 1rem;
-  height: fit-content;
   display: grid;
   grid-template-columns: 1.5fr 4fr;
   justify-items: baseline;
@@ -145,11 +171,10 @@ label {
 }
 
 .input_container > input:not(input[id$="_date"]) {
-  width: 25rem;
-  height: 3rem;
+  width: 100%;
   border: none;
-  padding: 1rem;
-  border-radius: 3rem;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
 }
 
 .overlay {
@@ -165,7 +190,7 @@ label {
 div[class^="div_remove--"] {
   width: 30rem;
   height: fit-content;
-  background-color: #8c7a44;
+  background-color: #f2c029;
   position: absolute;
   border-radius: 1rem;
   inset: 0;
@@ -180,54 +205,211 @@ div[class^="div_remove--"] {
 }
 
 div[class^="div_remove--"] p {
-  color: white;
+  color: black;
+  font-size: 1.6rem;
 }
 
 .close_btn {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: brown;
   align-self: flex-end;
 }
 
 nav {
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
   height: 5rem;
 }
 
 button {
-  width: 10rem;
-  height: 3rem;
-  border: none;
-  border-radius: 1rem;
-  transition-property: background-color, color;
-  transition-duration: 0.5s;
-}
-
-.add {
-  width: 20rem;
-  margin-top: 3rem;
+  font-size: 1.2rem;
+  padding: 1em 3em;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: white;
   border: none;
   border-radius: 0.5rem;
-  font-size: 1.8rem;
-  font-weight: 600;
-  height: 3rem;
+  box-shadow: 0px 0px 5px -1px rgb(128, 128, 128, 0.5);
+  background: linear-gradient(to top, black 50%, #fadd4b 50%);
+  background-size: 100% 200%;
+  background-position: 0 -100%;
+  transition-property: background-position color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+button:hover {
+  background-position: 0 0;
+  color: black;
+}
+.add {
+  margin-top: 3rem;
   color: white;
   transition-duration: 0.5s;
   background-color: rgb(131, 135, 135);
 }
 
-button:hover {
-  background-color: cadetblue;
-  color: aliceblue;
-  cursor: pointer;
-}
-
 .hidden.hidden {
   display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  section {
+    width: 101rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  section {
+    width: 90%;
+    height: 90%;
+  }
+
+  .main {
+    width: 100%;
+    height: 40rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  section {
+    width: 90%;
+    height: fit-content;
+    justify-content: flex-start;
+    padding: 1rem 0.5rem;
+  }
+
+  .main {
+    width: 100%;
+    height: 50rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    align-self: flex-start;
+  }
+
+  .info {
+    gap: 0.5rem;
+    justify-content: flex-start;
+    height: fit-content;
+  }
+
+  h2 {
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  h2 > span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -moz-box-orient: vertical;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 1em 3em;
+    font-weight: 400;
+    border-radius: 0.5rem;
+  }
+  .form-button {
+    font-size: 1.2rem;
+  }
+
+  div[class^="div_remove--"] {
+    max-width: 25rem;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  div[class^="div_remove--"] p {
+    color: black;
+    font-size: 1.4rem;
+  }
+
+  div[class^="div_update--"] {
+    width: 100%;
+    max-width: 25rem;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: #f2c029;
+  }
+
+  div[class^="div_update--"] > h1 {
+    font-size: 2rem;
+
+    color: black;
+  }
+
+  div[class^="div_update--"] form {
+    width: 100%;
+    gap: 1rem;
+    padding: 0rem 2rem;
+  }
+
+  label {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+
+  .input_container:not(.selectable) {
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .release_date {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .input_container > input:not(input[id$="_date"]) {
+    width: 100%;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.6rem;
+  }
+  input[id$="_date"] {
+    width: 10rem;
+    align-self: flex-end;
+  }
+
+  button {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
 }

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation | Welcome</title>
     <link rel="stylesheet" href="Css/song_preview_style.css" type="text/css"/>
-    <script src="JS/album_script.js" defer></script>
+    <script src="JS/song_script.js" defer></script>
   </head>
 <body>
     <section>
@@ -61,7 +61,7 @@
         language = rs.getString("language");
             %>
 
-      <h1>music preview</h1>
+      <h1 class="page-title">music preview</h1>
       <div class="main">
         <iframe width="560" height="315" src=<%="https://www.youtube.com/embed/"+rs.getString("song_url") %> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
         <div class="info">
@@ -101,7 +101,28 @@
       </nav>
 
     <div class="div_remove--song hidden">
-      <div class="close_btn"></div>
+       <div class="close_btn">
+             <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 100 125"
+                        style="enable-background: new 0 0 100 100"
+                        xml:space="preserve"
+                      >
+                        <style type="text/css">
+                          .st0 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                          }
+                        </style>
+                        <path
+                          class="st0"
+                          d="M50,10.024c22.078,0,39.976,17.899,39.976,39.976S72.078,89.976,50,89.976  c-22.078,0-39.976-17.898-39.976-39.976C10.024,27.922,27.922,10.024,50,10.024L50,10.024z M64.85,61.987L52.863,50L64.85,38.013  c1.884-1.884-0.978-4.746-2.862-2.862L50,47.138L38.013,35.15c-1.884-1.884-4.746,0.978-2.862,2.862L47.138,50L35.151,61.987  c-1.884,1.884,0.978,4.746,2.862,2.862L50,52.862l11.987,11.987C63.871,66.733,66.734,63.871,64.85,61.987L64.85,61.987z   M75.405,24.595c-14.03-14.031-36.78-14.031-50.811,0c-14.03,14.03-14.031,36.78,0,50.811c14.031,14.031,36.78,14.03,50.811,0  C89.436,61.375,89.436,38.625,75.405,24.595z"
+                        />
+                      </svg></div>
       <form class="delete_form" action="delete_page.jsp" method="get">
       <input type="hidden" name="song_id" value=<%=songId%> />
       <input type="hidden" name="request_type" value="delete_song" />
@@ -112,7 +133,28 @@
     </div>
 
     <div class="div_update--song hidden">
-      <div class="close_btn"></div>
+       <div class="close_btn">
+             <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 100 125"
+                        style="enable-background: new 0 0 100 100"
+                        xml:space="preserve"
+                      >
+                        <style type="text/css">
+                          .st0 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                          }
+                        </style>
+                        <path
+                          class="st0"
+                          d="M50,10.024c22.078,0,39.976,17.899,39.976,39.976S72.078,89.976,50,89.976  c-22.078,0-39.976-17.898-39.976-39.976C10.024,27.922,27.922,10.024,50,10.024L50,10.024z M64.85,61.987L52.863,50L64.85,38.013  c1.884-1.884-0.978-4.746-2.862-2.862L50,47.138L38.013,35.15c-1.884-1.884-4.746,0.978-2.862,2.862L47.138,50L35.151,61.987  c-1.884,1.884,0.978,4.746,2.862,2.862L50,52.862l11.987,11.987C63.871,66.733,66.734,63.871,64.85,61.987L64.85,61.987z   M75.405,24.595c-14.03-14.031-36.78-14.031-50.811,0c-14.03,14.03-14.031,36.78,0,50.811c14.031,14.031,36.78,14.03,50.811,0  C89.436,61.375,89.436,38.625,75.405,24.595z"
+                        />
+                      </svg></div>
       <h1>update album</h1>
       <form action="" method="get">
         <input id="identifier" type="hidden" name="formIdentifier" value="update_song" />
@@ -125,7 +167,7 @@
         </div>
 
 
-        <div class="input_container">
+        <div class="input_container selectable">
           <label for="album_id">album</label>
           <select id="album_id" name="albums">
             <%
@@ -150,7 +192,7 @@
           <input type="text" id="song_description" placeholder="description" name="song_description" value="<%=description%>" />
         </div>
 
-        <div class="input_container">
+        <div class="input_container release_date selectable">
           <label for="release_date">release date</label>
           <input type="date" id="release_date" name="release_date" value=<%=releaseDate%> />
         </div>
@@ -164,7 +206,7 @@
           <input type="text" id="song_url" placeholder="youtube url" name="song_url" />
         </div>
 
-        <button class="add update-btn">update</button>
+        <button class="add update-btn form-button">update</button>
       </form>
     </div>
     <%
