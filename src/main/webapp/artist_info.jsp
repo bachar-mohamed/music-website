@@ -253,6 +253,7 @@
             e.printStackTrace();
          }
    %>
+   <footer></footer>
   </body>
 </html>
 

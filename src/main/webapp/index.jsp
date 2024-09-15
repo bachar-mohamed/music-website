@@ -15,7 +15,7 @@
   </head>
 <body>
    <header>
-       <h1>music library</h1>
+       <h1>Library</h1>
    </header>
  <main>
  <section>

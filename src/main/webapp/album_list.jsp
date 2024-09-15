@@ -16,7 +16,7 @@
   </head>
 <body>
    <header>
-       <h1>music library</h1>
+       <h1>library</h1>
    </header>
  <main>
  <section>
@@ -85,5 +85,6 @@
                   %>
 
         </main>
+        <footer></footer>
 </body>
 </html>
