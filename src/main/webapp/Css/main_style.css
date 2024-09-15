@@ -309,10 +309,10 @@ footer {
     font-size: 1.6rem;
   }
 
-    .form button:not(.close_tab) {
+  .form button:not(.close_tab) {
       font-size: 1.2rem;
       font-weight: 400;
-    }
+  }
 
 }
 
@@ -368,7 +368,6 @@ footer {
 
   ul {
     width: 90vw;
-    height: 50rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
     gap: 0.5rem;
@@ -456,7 +455,7 @@ footer {
 
    .form {
       width: 100%;
-          max-width: 30rem;
+          max-width: 38rem;
           border: 1px solid black;
           padding: 1rem;
           background-color: #f2c029;

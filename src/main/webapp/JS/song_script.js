@@ -5,7 +5,6 @@ const removeWindow = document.querySelector("div[class^='div_remove--']");
 const updateWindow = document.querySelector("div[class^='div_update--']");
 const closeBtn = document.querySelectorAll(".close_btn");
 const updateSongBtn = document.querySelector(".update-btn");
-//song_preview.jsp
 
 console.log(deleteBtn);
 console.log(overlay);
@@ -22,7 +21,7 @@ function getId(url) {
   return match && match[2].length === 11 ? match[2] : null;
 }
 
-/*updateSongBtn.addEventListener("click",(e)=>{
+updateSongBtn.addEventListener("click",(e)=>{
     e.preventDefault();
     const songUrl =document.querySelector("#song_url");
     console.log(songUrl);
@@ -44,7 +43,7 @@ function getId(url) {
     window.location.href =link;
     }
 
-})*/
+})
 
 deleteBtn.addEventListener("click", (e) => {
   overlay.classList.remove("hidden");

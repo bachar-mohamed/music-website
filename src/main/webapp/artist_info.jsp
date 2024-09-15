@@ -61,8 +61,8 @@
             <input type="hidden" name="formIdentifier" value="searchSong">
             <input type="hidden" name="artist" value=<%=artistName.trim().replace(" ","_")%>>
             <input type="hidden" name="id" value=<%=userId%>>
-            <button type="submit" class="more">see music</button>
             <div class="blur"></div>
+            <button type="submit" class="more">see music</button>
             <div class="profile_pic"  style=<%=coverUrl.replace(" ","/")%>></div>
         </form>
 
@@ -140,7 +140,25 @@
       </div>
 
       <div class="div_remove--album hidden">
-        <div class="close_btn"></div>
+        <div class="close_btn">
+         <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              x="0px"
+              y="0px"
+              viewBox="0 0 100 125"
+              style="enable-background: new 0 0 100 100"
+              xml:space="preserve">
+              <style type="text/css">
+              .st0 {
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                }
+              </style>
+              <path class="st0" d="M50,10.024c22.078,0,39.976,17.899,39.976,39.976S72.078,89.976,50,89.976  c-22.078,0-39.976-17.898-39.976-39.976C10.024,27.922,27.922,10.024,50,10.024L50,10.024z M64.85,61.987L52.863,50L64.85,38.013  c1.884-1.884-0.978-4.746-2.862-2.862L50,47.138L38.013,35.15c-1.884-1.884-4.746,0.978-2.862,2.862L47.138,50L35.151,61.987  c-1.884,1.884,0.978,4.746,2.862,2.862L50,52.862l11.987,11.987C63.871,66.733,66.734,63.871,64.85,61.987L64.85,61.987z   M75.405,24.595c-14.03-14.031-36.78-14.031-50.811,0c-14.03,14.03-14.031,36.78,0,50.811c14.031,14.031,36.78,14.03,50.811,0  C89.436,61.375,89.436,38.625,75.405,24.595z"/>
+         </svg>
+        </div>
         <form class="delete_form" action="delete_page.jsp" method="get">
             <input type="hidden" name="artist_id" value=<%=artistId %>>
             <input type="hidden" name="id" value=<%=userId %>>
@@ -151,7 +169,25 @@
       </div>
 
       <div class="div_update--album hidden">
-        <div class="close_btn"></div>
+        <div class="close_btn">
+        <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              x="0px"
+              y="0px"
+              viewBox="0 0 100 125"
+              style="enable-background: new 0 0 100 100"
+              xml:space="preserve">
+              <style type="text/css">
+              .st0 {
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                }
+              </style>
+              <path class="st0" d="M50,10.024c22.078,0,39.976,17.899,39.976,39.976S72.078,89.976,50,89.976  c-22.078,0-39.976-17.898-39.976-39.976C10.024,27.922,27.922,10.024,50,10.024L50,10.024z M64.85,61.987L52.863,50L64.85,38.013  c1.884-1.884-0.978-4.746-2.862-2.862L50,47.138L38.013,35.15c-1.884-1.884-4.746,0.978-2.862,2.862L47.138,50L35.151,61.987  c-1.884,1.884,0.978,4.746,2.862,2.862L50,52.862l11.987,11.987C63.871,66.733,66.734,63.871,64.85,61.987L64.85,61.987z   M75.405,24.595c-14.03-14.031-36.78-14.031-50.811,0c-14.03,14.03-14.031,36.78,0,50.811c14.031,14.031,36.78,14.03,50.811,0  C89.436,61.375,89.436,38.625,75.405,24.595z"/>
+         </svg>
+        </div>
         <h1>update album</h1>
         <form action="artist_info.jsp" method="get">
           <input type="hidden" name="formIdentifier" value="update_artist" />
@@ -168,12 +204,12 @@
            <input type="text" id="bio" placeholder="bio" name="bio" value="<%=bio%>" required />
          </div>
 
-         <div class="input_container">
+         <div class="input_container date selectable">
            <label for="birth_date">birth date</label>
            <input type="date" id="birth_date" name="birth_date" value="<%=birthDate%>" required/>
          </div>
 
-         <div class="input_container">
+         <div class="input_container date selectable">
            <label for="debut_date">debut date</label>
            <input type="date" id="debut_date" name="debut_date" value="<%=debutDate%>" required />
          </div>
@@ -219,3 +255,4 @@
    %>
   </body>
 </html>
+

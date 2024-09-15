@@ -8,12 +8,17 @@ const status = document.getElementById("query-status");
 const errorMsg = document.querySelector(".error-msg");
 
 
-console.log(status);
+
+
+const errorManager = function(){
 if(status.value=="false"){
 errorMsg.classList.remove("hidden-li");
 }else{
 errorMsg.classList.add("hidden-li");
 }
+}
+
+errorManager();
 
 musicContainer.addEventListener("mouseover", (e) => {
   parent = e.target.closest("li");
@@ -32,5 +37,19 @@ musicContainer.addEventListener("mouseout", () => {
   parent.classList.remove("highlighted");
   image.classList.remove("zoomIn");
 });
+
+const mobileStyle = function(){
+if(window.screen.width<=768){
+console.log(musicContainer);
+target = musicContainer.querySelectorAll(".img_container button");
+console.log(target);
+if(target==null) return;
+target.forEach(element=>{
+element.classList.remove("hidden");
+})
+}
+}
+
+mobileStyle();
 
 

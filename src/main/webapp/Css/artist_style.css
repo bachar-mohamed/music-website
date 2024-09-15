@@ -15,14 +15,14 @@ html {
 body {
   width: inherit;
   height: inherit;
-  background-color: rgb(41, 39, 39);
+  background-color: black;
 }
 
 section {
   position: absolute;
   width: 60%;
   height: 80%;
-  background-color: rgb(19, 19, 19);
+  background-color: #171717;
   box-shadow: 0px 0px 20px -1px black;
   inset: 0;
   margin: auto;
@@ -34,14 +34,14 @@ section {
 }
 
 .img {
-  position: relative;
-  width: 100%;
-  height: 40%;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  background-image: url(../resources/coffee-lab.png);
-  background-position: center;
-  background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 40%;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-image: url(../resources/coffee-lab.png);
+    background-position: center;
+    background-size: cover;
 }
 
 .blur {
@@ -49,6 +49,8 @@ section {
   inset: 0;
   background-color: rgb(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
 }
 
 .profile_pic {
@@ -71,17 +73,12 @@ section {
   bottom: 0;
   margin-right: 2rem;
   margin-bottom: -2.5rem;
-  border: none;
-  border-radius: 1rem;
-  width: 15rem;
-  height: 5rem;
-  z-index:1;
-  color: white;
 }
 
 .data {
-  width: 95%;
-  height: 60%;
+  width: 100%;
+  height: 70%;
+  padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,12 +87,13 @@ section {
 
 ul {
   width: inherit;
-  height: 80%;
+  height: 100%;
   display: flex;
+  padding-top: 1rem;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  align-self: baseline;
+  gap: 1.2rem;
 }
 
 li {
@@ -110,8 +108,8 @@ li {
 }
 
 h3 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 500;
   color: white;
 }
 
@@ -135,57 +133,61 @@ div[class^="div_update--"] {
   position: absolute;
   inset: 0;
   margin: auto;
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  border-radius: 2rem;
-  width: 60rem;
+  border-radius: 1rem;
+  gap: 0.5rem;
+  width: 40rem;
+  /*min-height: 35rem;*/
   height: fit-content;
-  padding: 2rem;
-  z-index: 1;
-  background-color: #8c7a44;
+  padding: 1rem;
+  z-index: 100;
+  background-color: #f2c029;
 }
 div[class^="div_update--"] > h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
+  padding: 0rem 2rem;
+  text-transform: capitalize;
+  color: black;
+  margin-bottom: 2rem;
 }
 
 div[class^="div_update--"] form {
   width: 100%;
-  height: max-content;
+  /*overflow: hidden;*/
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 2rem;
+  gap: 1rem;
 }
 
 label {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .input_container {
   width: 100%;
-  margin-bottom: 1rem;
-  height: 4rem;
   display: grid;
   grid-template-columns: 1.5fr 4fr;
   justify-items: baseline;
   align-items: center;
 }
 
-.input_container > input:not(input[id$="_date"], input[id$="_cover"]) {
-  width: 35rem;
-  height: 3rem;
+.input_container > input:not(input[id$="_date"]) {
+  width: 100%;
   border: none;
-  border-radius: 3rem;
-  padding: 2rem;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
 }
 
 div[class^="div_remove--"] {
   width: 30rem;
   height: fit-content;
-  background-color: #8c7a44;
+  background-color: #f2c029;
   position: absolute;
   border-radius: 1rem;
   inset: 0;
@@ -200,7 +202,8 @@ div[class^="div_remove--"] {
 }
 
 div[class^="div_remove--"] p {
-  color: white;
+  color: black;
+  font-size: 1.6rem;
 }
 
 .delete_form {
@@ -213,38 +216,21 @@ div[class^="div_remove--"] p {
   gap: 1rem;
 }
 
-.delete_form > button {
-  width: 15rem;
-  height: 4rem;
-  border: none;
-  border-radius: 1rem;
-  color: white;
-}
-
 .close_btn {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: brown;
   align-self: flex-end;
 }
 
 nav {
-  width: 50%;
+  width: 100%;
   height: 6rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
   align-items: center;
-  padding: 0rem 2rem;
-}
-
-nav > button {
-  border: none;
-  border-radius: 1rem;
-  width: 15rem;
-  height: 5rem;
-  color: white;
 }
 
 .hidden.hidden {
@@ -252,23 +238,174 @@ nav > button {
 }
 
 button {
-  background-color: rgb(131, 127, 127);
-  transition: 0.5s;
-}
-
-.add {
-  width: 25rem;
-  margin-top: 3rem;
+  width: 10em;
+  min-width: 5rem;
   border: none;
+  color: black;
   border-radius: 0.5rem;
-  font-size: 1.8rem;
-  font-weight: 600;
-  height: 5rem;
-  color: white;
+  font-size: 1vw;
+  font-weight: 400;
+  height: 3em;
+  min-height: 2rem;
+  background: linear-gradient(to top, #fadd4b 50%, black 50%);
+  background-size: 100% 200%;
+  background-position: 0 -100%;
+  transition-property: background-position, color;
   transition-duration: 0.5s;
 }
 
 button:hover {
-  background-color: rgb(73, 216, 99);
-  color: black;
+  background-position: 0 0;
+  color: white;
 }
+
+.form-button {
+  width: 10em;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1vw;
+  font-weight: 600;
+  height: 3em;
+  margin-top: 3rem;
+  color: black;
+  transition-duration: 0.5s;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section {
+    width: 80%;
+  }
+
+  button {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .form-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    width: 80%;
+    height: fit-content;
+  }
+
+  .img{
+    height: 20rem
+  }
+
+    .profile_pic {
+      position: absolute;
+      left: 1rem;
+      bottom: 0;
+      top:0;
+      margin:auto;
+      width: 12rem;
+      height: 15rem;
+    }
+
+  .more {
+    margin-bottom: -1.9rem;
+  }
+
+  .form-button {
+    font-size: 1.2rem;
+  }
+
+  .data {
+    width: 100%;
+    height: fit-content;
+  }
+
+  ul {
+    width: inherit;
+    height: fit-content;
+    padding: 2rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  div[class^="div_remove--"] {
+    max-width: 25rem;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  div[class^="div_remove--"] p {
+    color: black;
+    font-size: 1.4rem;
+  }
+
+  div[class^="div_update--"] {
+    width: 100%;
+    max-width: 38rem;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: #f2c029;
+  }
+
+  div[class^="div_update--"] > h1 {
+    font-size: 2rem;
+    color: black;
+  }
+
+  div[class^="div_update--"] form {
+    width: 100%;
+    gap: 1rem;
+    padding: 0rem 2rem;
+  }
+
+  label {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+
+  .input_container:not(.selectable) {
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .date {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .input_container > input:not(input[id$="_date"]) {
+    width: 100%;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.6rem;
+  }
+  input[id$="_date"] {
+    width: 10rem;
+    align-self: flex-end;
+  }
+
+  button {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
+

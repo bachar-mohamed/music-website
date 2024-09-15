@@ -57,10 +57,9 @@ section {
 ul {
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 26.7rem);
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit,26rem);
+  justify-content:center;
   place-items: center;
-  align-items: center;
   width: 100%;
   gap: 2rem;
 }
@@ -148,28 +147,30 @@ li {
   text-transform: capitalize;
 }
 
+.hidden-li.hidden-li {
+  display: none;
+}
+
 .error-msg {
   width: 100%;
   height: 100%;
   display: flex;
+  border-color:transparent;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align:center;
   gap: 2rem;
 }
 
-.hidden-li {
-  display: none;
-}
-
 img {
-  width: 110px;
-  height: 110px;
+  width: 50px;
+  height: 50px;
 }
 
 .error-text {
   color: #a29b9b;
-  font-size: 2.5rem;
+  font-size: 1.4rem;
 }
 
 .hidden {
@@ -186,9 +187,6 @@ img {
     -webkit-line-clamp: 1;
     line-clamp: 1;
     -webkit-box-orient: vertical;
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 600;
     text-overflow: ellipsis;
 }
 
@@ -209,4 +207,45 @@ footer {
   width: 100%;
   height: 6.4rem;
   background-color: #8c7a44;
+}
+
+@media screen and (max-width: 500px){
+
+.more_btn {
+  width: 7rem;
+  height: 3rem;
+}
+
+.play_btn {
+  width: 4rem;
+  height: 4rem;
+}
+
+.btn_text {
+  font-size:1rem
+}
+
+ul {
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, 16rem);
+  row-gap: 0rem;
+  column-gap: 4rem;
+}
+
+.img_container {
+  position: relative;
+  border-radius: 1rem;
+  width: 100%;
+  height: 15rem;
+}
+
+.music_title {
+  font-size: 1.4rem;
+}
+
+.music_artist {
+    font-size: 1.6rem;
+
+}
+
 }
