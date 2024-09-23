@@ -5,6 +5,20 @@ const closeBtn = document.querySelectorAll(".close_tab");
 const menu = document.querySelector(".menu");
 let model;
 
+addEventListener("resize",()=>{
+const buttons = document.querySelectorAll(".main_btn");
+if(window.screen.width<767){
+console.log("called");
+buttons.forEach(button=>{
+    button.classList.add("highlighted");
+})
+}else{
+  buttons.forEach(button=>{
+      button.classList.remove("highlighted");
+  })
+}
+});
+
 menu.addEventListener("click", (e) => {
   const trigger = e.target.closest(".main_btn");
   if (trigger === null) return;
