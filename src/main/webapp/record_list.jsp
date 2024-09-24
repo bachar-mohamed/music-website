@@ -16,7 +16,7 @@
   </head>
 <body>
    <header>
-       <h1>music library</h1>
+       <h1>Record Labels</h1>
    </header>
  <main>
  <section>

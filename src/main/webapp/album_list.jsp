@@ -16,7 +16,7 @@
   </head>
 <body>
    <header>
-       <h1>library</h1>
+       <h1>Albums</h1>
    </header>
  <main>
  <section>

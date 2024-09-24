@@ -22,6 +22,7 @@
 	String username = "test";
 	String password = "1234";
 	int status=0;
+	String errorMessage="";
 	PreparedStatement statement =null;
 	ResultSet rs =null;
 	String userId="";
@@ -75,6 +76,7 @@
             FileItem temp = null;
             switch(formOption){
                         case "addSong":
+                            errorMessage = "no album selected, select an album or add a new one";
                             uploadPath=path+"songCover"+File.separator;
                             for(int i=1;i<fileItems.size();i++){
                                temp = fileItems.get(i);
@@ -109,6 +111,7 @@
                         System.out.println("sql: "+sql);
                         break;
                         case "addAlbum":
+                           errorMessage = "no artist selected, select an artist or add a new one";
                            uploadPath=path+"albumCover"+File.separator;
                            for(int i=1;i<fileItems.size();i++){
                              temp = fileItems.get(i);
@@ -131,6 +134,7 @@
                              sql= "INSERT INTO album(album_title,artist,description,release_date,album_cover,user_id) VALUES('"+fields.get(1)+"',get_artist_id('"+fields.get(2).trim().replace("_"," ")+"'),'"+fields.get(3)+"','"+fields.get(4)+"','"+fields.get(5)+"',"+userId+");";
                         break;
                         case "addArtist":
+                            errorMessage = "no record label selected, select a record label or add a new one";
                             uploadPath=path+"artistCover"+File.separator;
                            for(int i=1;i<fileItems.size();i++){
                              temp = fileItems.get(i);
@@ -177,19 +181,19 @@
                         }
 
                         if(formOption.compareTo("addSong")==0){
-                            System.out.println("hahahahah");
                              if(songUrl.equalsIgnoreCase("Invalid YouTube URL")){
                                status=0;
-                              }else{
+                               errorMessage = "Invalid YouTube URL";
+                              }
+                            else{
                             statement = con.prepareStatement(sql);
                             rs = statement.executeQuery();
                             while(rs.next()){
                             System.out.println("the count is: "+rs.getInt(1));
                             status=rs.getInt(1);
-                            }
+                                }
                             }
                         }else{
-                            System.out.println("hahahahah2");
                             statement = con.prepareStatement(sql);
                             status=statement.executeUpdate();
                         }
@@ -202,14 +206,15 @@
                     {
                             e.getCause();
                     }
+                    System.out.println("message is: "+errorMessage);
             if(status>0){
             %>
     <div class="status_pic success"></div>
-    <p>operation success</p>
+    <p class="success_notification">operation success</p>
     <%}else if(status==0){%>
     <div class="status_pic failure"></div>
-        <p>operation failed</p>
-        <p>please check if the values entered are correct</p>
+        <p class="error_notification">operation failed</p>
+        <p class="error_message"><%=errorMessage%></p>
     <%}%>
     <form action="main.jsp" action="get">
     <input type="hidden" name="id" value=<%=userId%>>

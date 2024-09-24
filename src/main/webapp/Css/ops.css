@@ -47,9 +47,15 @@ body {
   background-image: url(../resources/success.png);
 }
 
-p {
-  font-size: 1.8rem;
-  font-weight: 600;
+
+
+.error_notification,.success_notification {
+  font-size: 1.4rem;
+}
+
+.error_message{
+font-size: 1.2rem;
+text-align:center;
 }
 
 button {
@@ -86,8 +92,12 @@ button:hover {
   height: 6rem;
 }
 
-p {
-  font-size: 1.6rem;
+.error_notification,.success_notification {
+  font-size: 1.3rem;
+}
+
+.error_message{
+font-size: 1.2rem;
 }
 
 @media screen and (max-width: 425px){

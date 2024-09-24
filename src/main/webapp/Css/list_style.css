@@ -47,11 +47,12 @@ button:hover {
 
 main {
   flex: 1 0 auto;
+  width:inherit;
+  padding:1rem;
 }
 
-main,
 section {
-  width: inherit;
+  width: 100%;
 }
 
 ul {

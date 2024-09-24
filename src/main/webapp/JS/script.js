@@ -3,18 +3,32 @@
 const overlay = document.querySelector(".overlay");
 const closeBtn = document.querySelectorAll(".close_tab");
 const menu = document.querySelector(".menu");
+const discover = document.querySelector(".discover");
 let model;
+
+
+discover.addEventListener("mouseover",(e)=>{
+    const button = discover.querySelector("button");
+    button.style.cursor = "pointer";
+    button.classList.add("hovered")
+})
+
+discover.addEventListener("mouseout",(e)=>{
+console.log("not hovered")
+    const button = discover.querySelector("button");
+    button.classList.remove("hovered")
+})
 
 addEventListener("resize",()=>{
 const buttons = document.querySelectorAll(".main_btn");
 if(window.screen.width<767){
 console.log("called");
 buttons.forEach(button=>{
-    button.classList.add("highlighted");
+  button.classList.add("highlighted");
 })
 }else{
-  buttons.forEach(button=>{
-      button.classList.remove("highlighted");
+    buttons.forEach(button=>{
+    button.classList.remove("highlighted");
   })
 }
 });
