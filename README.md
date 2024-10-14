@@ -1,6 +1,8 @@
 # Project Description
 I developed this project using Java, and PostgreSQL, creating a full web site where users can manage songs, albums, artists, and record labels, enabling them to perform all CRUD operations with ease. Java and JSP are used for server-side processing and dynamic content generation, while Java handles communication with the PostgreSQL database, Frontend technologies like HTML, CSS, and JavaScript are utilized to provide an interactive user experience, making this a comprehensive system for managing music-related data.
 
+
+
 # Project preview
 - singup/login page
 
@@ -35,6 +37,7 @@ I developed this project using Java, and PostgreSQL, creating a full web site wh
 - Artist Page
 
 ![Screenshot 2024-10-14 181943](https://github.com/user-attachments/assets/84ce004e-0047-4e37-a94b-9851633785c1)
+
 
 
 # Project features
@@ -72,14 +75,25 @@ I developed this project using Java, and PostgreSQL, creating a full web site wh
   - **Get Songs by Artist**: Retrieve all songs by a specific artist.
   - **Get Songs by Record Label**: Retrieve all songs under a specific record label.
 
+
+
 # Tech stack
 
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Java, JSP
 - **Database**: PostgreSQL
-  
 
-## Restoring the Database
+
+  
+# Development environment
+
+- **JDK**: jdk-18.0.1
+- **Apache Tomcat**: Version 9.0.91
+- **PostgreSQL**: Version 15
+- **Intellij IDEA**: Version 2022.1.1
+
+
+# Restoring the Database
 
 1. Open **Git Bash** or your WSL terminal.
 2. Ensure you have the path to the database file, in the project it is located at `src\main\webapp\Database`
@@ -95,10 +109,3 @@ I developed this project using Java, and PostgreSQL, creating a full web site wh
    - `path_to_db_file.sql`: The path to your database file.
 
 4. When prompted, enter the password for the PostgreSQL user.
-
-# Development environment
-
-- **JDK**: jdk-18.0.1
-- **Apache Tomcat**: Version 9.0.91
-- **PostgreSQL**: Version 15
-- **Intellij IDEA**: Version 2022.1.1
