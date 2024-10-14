@@ -2,22 +2,32 @@
 I developed this project using Java, and PostgreSQL, creating a full web site where users can manage songs, albums, artists, and record labels, enabling them to perform all CRUD operations with ease. Java and JSP are used for server-side processing and dynamic content generation, while Java handles communication with the PostgreSQL database, Frontend technologies like HTML, CSS, and JavaScript are utilized to provide an interactive user experience, making this a comprehensive system for managing music-related data.
 
 # Project preview
-
 - singup/login page
 ![Screenshot 2024-10-14 115433](https://github.com/user-attachments/assets/38c65bb9-167c-4366-b733-aec071414a5f)
 
+![Untitledvideo-MadewithClipchamp-ezgif com-resize](https://github.com/user-attachments/assets/d3f4f947-f11e-4ab3-96e3-d857ac0cecf5)
+
 - Main page
 ![Screenshot 2024-10-14 115507](https://github.com/user-attachments/assets/4e30a430-e504-4c7e-a737-ab82c95ec076)
+
 ![mainmenu-ezgif com-resize (1)](https://github.com/user-attachments/assets/03aec7ae-dd5e-470a-899c-739baa1e63cd)
 
 - library page
 ![Screenshot 2024-10-14 120105](https://github.com/user-attachments/assets/7f8c33c2-81ce-409f-8bd5-542384cbf9b7)
 
+![library-ezgif com-resize](https://github.com/user-attachments/assets/2cf7055e-36a6-4c14-a05d-0f01ddda9980)
+
 - Song Preview Page
 ![Screenshot 2024-10-14 120309](https://github.com/user-attachments/assets/96227553-d7b6-4e64-81ea-4493aa77342b)
 
+![update-ezgif com-resize](https://github.com/user-attachments/assets/f6564aa4-e55b-4fe0-94e4-d3e831a94466)
+
 - album Preview Page
 ![Screenshot 2024-10-14 120634](https://github.com/user-attachments/assets/e2e32341-26d1-41af-ae9c-145e18d8bb7f)
+
+
+
+
 
 # Project features
 - **User Authentication:**
