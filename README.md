@@ -14,7 +14,7 @@ I developed this project using Java, and PostgreSQL, creating a full web site wh
 
 ![mainmenu-ezgif com-resize (1)](https://github.com/user-attachments/assets/03aec7ae-dd5e-470a-899c-739baa1e63cd)
 
-- library page
+- Library page
   
 ![Screenshot 2024-10-14 120105](https://github.com/user-attachments/assets/7f8c33c2-81ce-409f-8bd5-542384cbf9b7)
 
@@ -28,10 +28,13 @@ I developed this project using Java, and PostgreSQL, creating a full web site wh
 
 ![update-ezgif com-resize](https://github.com/user-attachments/assets/f6564aa4-e55b-4fe0-94e4-d3e831a94466)
 
-- album Preview Page
+- Album Preview Page
 
 ![Screenshot 2024-10-14 120634](https://github.com/user-attachments/assets/e2e32341-26d1-41af-ae9c-145e18d8bb7f)
 
+- Artist Page
+
+![Screenshot 2024-10-14 181943](https://github.com/user-attachments/assets/84ce004e-0047-4e37-a94b-9851633785c1)
 
 
 # Project features
@@ -78,7 +81,7 @@ I developed this project using Java, and PostgreSQL, creating a full web site wh
 
 # Development environment
 
-- **JDK**: `jdk-18.0.1.1`
+- **JDK**: jdk-18.0.1
 - **Apache Tomcat**: Version 9.0.91
-- **PostgreSQL**: Version 42.7.3
+- **PostgreSQL**: Version 15
 - **Intellij IDEA**: Version 2022.1.1
