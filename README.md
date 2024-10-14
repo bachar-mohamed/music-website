@@ -70,4 +70,15 @@ I developed this project using Java, and PostgreSQL, creating a full web site wh
   - **Get Songs by Record Label**: Retrieve all songs under a specific record label.
 
 # Tech stack
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Java, JSP
+- **Database**: PostgreSQL
+  
+
 # Development environment
+
+- **JDK**: `jdk-18.0.1.1`
+- **Apache Tomcat**: Version 9.0.91
+- **PostgreSQL**: Version 42.7.3
+- **Intellij IDEA**: Version 2022.1.1
