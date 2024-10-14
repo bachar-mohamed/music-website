@@ -79,6 +79,23 @@ I developed this project using Java, and PostgreSQL, creating a full web site wh
 - **Database**: PostgreSQL
   
 
+## Restoring a Database
+
+1. Open **Git Bash** or your WSL terminal.
+2. Ensure you have the path to the database file, in the project it is located at `src\main\webapp\Database`
+3. Run the following command to restore the database:
+
+   ```bash
+   psql -U username -d database_name -f path_to_db_file.sql
+   ```
+
+   Replace the placeholders:
+   - `username`: Your PostgreSQL username (usually `postgres`).
+   - `database_name`: The name of the database where the backup will be restored.
+   - `path_to_db_file.sql`: The path to your database file.
+
+4. When prompted, enter the password for the PostgreSQL user.
+
 # Development environment
 
 - **JDK**: jdk-18.0.1
