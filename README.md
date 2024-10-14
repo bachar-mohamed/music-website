@@ -79,7 +79,7 @@ I developed this project using Java, and PostgreSQL, creating a full web site wh
 - **Database**: PostgreSQL
   
 
-## Restoring a Database
+## Restoring the Database
 
 1. Open **Git Bash** or your WSL terminal.
 2. Ensure you have the path to the database file, in the project it is located at `src\main\webapp\Database`
