@@ -26,9 +26,6 @@ I developed this project using Java, and PostgreSQL, creating a full web site wh
   
 ![Screenshot 2024-10-14 120309](https://github.com/user-attachments/assets/96227553-d7b6-4e64-81ea-4493aa77342b)
 
-![Untitledvideo-MadewithClipchamp1-ezgif com-resize](https://github.com/user-attachments/assets/49a4b473-9730-4f39-862f-4fd8fc32d0d9)
-
-![update-ezgif com-resize](https://github.com/user-attachments/assets/f6564aa4-e55b-4fe0-94e4-d3e831a94466)
 
 - Album Preview Page
 
