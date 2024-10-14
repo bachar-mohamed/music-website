@@ -21,7 +21,7 @@ console.log("not hovered")
 
 addEventListener("resize",()=>{
 const buttons = document.querySelectorAll(".main_btn");
-if(window.screen.width<767){
+if(window.screen.width<=767){
 console.log("called");
 buttons.forEach(button=>{
   button.classList.add("highlighted");
@@ -42,15 +42,19 @@ menu.addEventListener("click", (e) => {
 });
 
 menu.addEventListener("mouseover", (e) => {
+if(window.screen.width>767){
   const target = e.target.closest(".main_btn");
   if (target == null) return;
   target.classList.add("highlighted");
+  }
 });
 
 menu.addEventListener("mouseout", (e) => {
+if(window.screen.width>767){
   const target = e.target.closest(".main_btn");
   if (target == null) return;
   target.classList.remove("highlighted");
+  }
 });
 
 closeBtn.forEach((btn) =>

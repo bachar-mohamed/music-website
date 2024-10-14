@@ -1,6 +1,7 @@
 "use strict";
 
 const parent = document.querySelector(".main");
+const header = document.querySelector("h1");
 const formContainer = document.querySelectorAll(".container");
 const loginForm = document.querySelector("#login-form");
 const signupForm = document.querySelector("#signUp-form");
@@ -16,8 +17,10 @@ anchors.forEach((anchor) => {
     formContainer.forEach((container) => {
       if (container.classList.contains(targetClass)) {
         container.classList.remove("hidden");
+        header.textContent="User Login"
       } else {
         container.classList.add("hidden");
+        header.textContent="User Signup"
       }
     });
   });

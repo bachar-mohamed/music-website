@@ -192,15 +192,14 @@ img {
 }
 
 .music_artist {
-  color: rgb(162, 159, 154);
+    color: rgb(162, 159, 154);
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     line-clamp: 1;
     -webkit-box-orient: vertical;
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 500;
     text-overflow: ellipsis;
 }
 

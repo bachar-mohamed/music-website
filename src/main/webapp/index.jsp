@@ -94,8 +94,8 @@
                       </button>
                      </form>
                 </div>
-                <h1 class="music_artist"><%= artist %></h1>
-                <h2 class="music_title"><%=songName %></h2>
+                <h1 class="music_title"><%=songName %></h1>
+                <h2 class="music_artist"><%= artist %></h2>
                 </li>
   <%}
   %>
