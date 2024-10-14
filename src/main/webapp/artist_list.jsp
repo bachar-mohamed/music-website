@@ -40,6 +40,7 @@
             String coverUrl="";
             sql = "SELECT artist_name,rec_name,artist_pic FROM artist INNER JOIN record_label ON artist.label_record=record_label.rec_id WHERE artist.artist_name ILIKE ? AND artist.user_id="+userId+";";
              System.out.println(sql);
+             System.out.println("artist name is: "+artistNameParam);
              statement = con.prepareStatement(sql);
              statement.setString(1,artistNameParam+"%");
             ResultSet rs = statement.executeQuery();
